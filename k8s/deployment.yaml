@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app
+  name: swiggy  # Changed from my-app to swiggy
   labels:
-    app: my-app
+    app: swiggy  # Changed from my-app to swiggy
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: my-app
+      app: swiggy  # Changed from my-app to swiggy
   template:
     metadata:
       labels:
-        app: my-app
+        app: swiggy  # Changed from my-app to swiggy
     spec:
       containers:
-      - name: my-app
+      - name: swiggy  # Changed from my-app to swiggy
         image: antosabin/swiggy:latest
         ports:
         - containerPort: 80
