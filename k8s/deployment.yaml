@@ -13,7 +13,7 @@ spec:
         app: swiggy
     spec:
       containers:
-      - name: swiggy
+      - name: swiggy-app
         image: antosabin/swiggy:latest
         ports:
         - containerPort: 3000
