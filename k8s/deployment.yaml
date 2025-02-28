@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: your-dockerhub-username/your-image-name:latest
+        image: antosabin/swiggy:latest
         ports:
         - containerPort: 80
