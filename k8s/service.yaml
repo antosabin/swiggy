@@ -5,9 +5,9 @@ metadata:
 spec:
   selector:
     app: swiggy  # Changed from my-app to swiggy (this must match the labels in Deployment)
-  ports:
+    ports:
     - protocol: TCP
       port: 80
-      targetPort: 80
+      targetPort: 3000
   type: NodePort   
 
