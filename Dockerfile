@@ -1,18 +1,14 @@
-# Use an official Node.js image
+# Use a base Node.js image (if using Node.js)
 FROM node:18
 
 # Set working directory
 WORKDIR /app
 
-# Copy package.json and install dependencies first (if applicable)
-COPY package.json package-lock.json ./
-RUN npm install  # Skip this if not a Node.js project
-
-# Copy the rest of the application files
+# Copy only necessary files (excluding package-lock.json)
 COPY . .
 
-# Expose the necessary port (optional, depends on your app)
+# Expose any required port (e.g., 3000 for a web app)
 EXPOSE 3000
 
-# Start the application
+# Command to run your application
 CMD ["node", "server.js"]
