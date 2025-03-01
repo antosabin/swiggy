@@ -8,7 +8,8 @@ spec:
   externalTrafficPolicy: Cluster
   type: NodePort
   ports:
-    - port: 80
-      nodePort: 32414
-      targetPort: 80
+    nodePort: 32414
+    port: 80
+    protocol: TCP
+    targetPort: 80
 
