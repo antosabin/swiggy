@@ -5,9 +5,10 @@ metadata:
 spec:
   selector:
     app: swiggy
-  ports:  # <-- This should be at the same level as "selector"
-  - protocol: TCP
-    port: 80
-    targetPort: 80
-  type: NodePort   
+  externalTrafficPolicy: Cluster
+  type: NodePort
+  ports:
+    - port: 80
+      nodePort: 32414
+      targetPort: 80
 
