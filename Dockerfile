@@ -1,14 +1,18 @@
-# Use an official Node.js runtime as a parent image
+# Use an official Node.js image
 FROM node:18
 
-# Set the working directory
+# Set working directory
 WORKDIR /app
 
-# Copy the rest of the app's source code
+# Copy package.json and install dependencies first (if applicable)
+COPY package.json package-lock.json ./
+RUN npm install  # Skip this if not a Node.js project
+
+# Copy the rest of the application files
 COPY . .
 
-# Expose a port for the application
+# Expose the necessary port (optional, depends on your app)
 EXPOSE 3000
 
-# Command to start the application
+# Start the application
 CMD ["node", "server.js"]
