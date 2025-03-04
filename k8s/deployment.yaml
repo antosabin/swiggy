@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: swiggy-app
-  namespace: swiggy  
+  namespace: metallb-system  
 spec:
   replicas: 2
   selector:
