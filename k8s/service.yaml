@@ -3,10 +3,9 @@ kind: Service
 metadata:
   name: swiggy-service
 spec:
+  type: LoadBalancer
   selector:
     app: swiggy
-  externalTrafficPolicy: Cluster
   ports:
-    - port: 80
-      targetPort: 80
-  type: LoadBalancer
+  - port: 80
+    targetPort: 8080
