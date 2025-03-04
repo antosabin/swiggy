@@ -5,7 +5,7 @@ data:
     - name: default
       protocol: layer2
       addresses:
-      - 3.7.157.12/32
+      - 13.202.56.132/32
 kind: ConfigMap
 metadata:
   name: config
