@@ -5,10 +5,9 @@ metadata:
 spec:
   selector:
     app: swiggy
-  type: NodePort
+  type: LoadBalancer
   externalTrafficPolicy: Cluster
   ports:
     - port: 80
       protocol: TCP
       targetPort: 80
-      nodePort: 32414  
